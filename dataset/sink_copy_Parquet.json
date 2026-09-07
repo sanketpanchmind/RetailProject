@@ -1,0 +1,19 @@
+{
+	"name": "sink_copy_Parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sink_AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"name": "AzureDFRetailProject",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "94498757-8f49-4ec0-aae2-0c54922ff024",
+		"tenantId": "4b3dd6d3-2f99-4271-b85a-7254e0449ff5"
+	}
+}

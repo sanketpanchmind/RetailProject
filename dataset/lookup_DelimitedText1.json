@@ -1,0 +1,22 @@
+{
+	"name": "lookup_DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_HttpServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "AbhiGithub101/buyanything/refs/heads/main/buy%20anything%20sales.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

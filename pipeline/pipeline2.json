@@ -110,7 +110,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@greater(length(activity('get row count Lookup').output.value), 0)\n",
+						"value": "@greater(int(activity('get row count Lookup').output.value[0].row_Count), 0)\n",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
@@ -186,17 +186,13 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [
-								{
-									"name": "myvar"
-								}
-							],
+							"userProperties": [],
 							"typeProperties": {
 								"storedProcedureName": "[dbo].[updatewatermark]",
 								"storedProcedureParameters": {
 									"myvar": {
 										"value": {
-											"value": "@activity('getsales_Lookup').output.firstRow.maxdate",
+											"value": "@activity('getsales_Lookup').output.value[0].maxdate",
 											"type": "Expression"
 										},
 										"type": "DateTime"
